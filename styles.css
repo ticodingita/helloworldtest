@@ -1,0 +1,64 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header section */
+header {
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #004d99;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+/* Main content */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #0088cc;
+    color: white;
+    padding: 1
