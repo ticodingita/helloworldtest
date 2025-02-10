@@ -1,11 +1,9 @@
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f8fb;
@@ -14,16 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-<<<<<<< HEAD
 }
 
-/* Header section */
-=======
-    text-align: center;
-}
-
-/* Header */
->>>>>>> 665f18e (Update)
 header {
     background-color: #0066cc;
     color: white;
@@ -31,24 +21,6 @@ header {
     padding: 40px 20px;
 }
 
-header h1 {
-<<<<<<< HEAD
-    font-size: 3em;
-=======
-    font-size: 2.8em;
->>>>>>> 665f18e (Update)
-}
-
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-<<<<<<< HEAD
-/* Navigation bar */
-=======
-/* Navigation */
->>>>>>> 665f18e (Update)
 nav {
     background-color: #004d99;
     text-align: center;
@@ -59,12 +31,7 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    margin: 0 15px;
     font-size: 1.1em;
-<<<<<<< HEAD
-    transition: background 0.3s;
-=======
->>>>>>> 665f18e (Update)
 }
 
 nav a:hover {
@@ -72,115 +39,12 @@ nav a:hover {
     border-radius: 5px;
 }
 
-<<<<<<< HEAD
-/* Main content */
 main {
     padding: 40px 20px;
     text-align: center;
     flex-grow: 1;
 }
 
-/* Button for external link */
-.button-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #0088cc, #0066cc);
-    color: white;
-    padding: 15px 35px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.button-link:hover {
-    background: linear-gradient(135deg, #0066cc, #004d99);
-    transform: scale(1.05);
-}
-
-/* Footer - ora occupa l'intera larghezza */
-=======
-/* Main Content */
-main {
-    flex-grow: 1;
-    padding: 40px 20px;
-}
-
-/* Generatore container */
-.generator-container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.generator-container h2 {
-    color: #0066cc;
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-/* Input field */
-input {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.2em;
-    border: 2px solid #0088cc;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Button container */
-.button-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* Buttons */
-button {
-    background-color: #0088cc;
-    color: white;
-    padding: 12px 20px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-button:hover {
-    background-color: #0066cc;
-    transform: scale(1.05);
-}
-
-/* Clear button */
-.clear-btn {
-    background-color: #cc0000;
-}
-
-.clear-btn:hover {
-    background-color: #a00000;
-}
-
-/* QR Code & Barcode Containers */
-#qrCodeDiv, #barcodeDiv {
-    margin-top: 20px;
-}
-
-/* Footer */
->>>>>>> 665f18e (Update)
 footer {
     background-color: #003366;
     color: white;
@@ -194,15 +58,10 @@ footer {
     font-weight: bold;
 }
 
-footer p {
-    margin: 0;
-    padding: 10px;
+.button-link {
+    background: #0088cc;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
 }
-<<<<<<< HEAD
-
-.year {
-    font-weight: bold;
-    color: #ffcc00;
-}
-=======
->>>>>>> 665f18e (Update)
