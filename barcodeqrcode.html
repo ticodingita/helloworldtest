@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generatore QR Code & Barcode</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
 </head>
 <body>
 
@@ -36,9 +33,11 @@
                 <button class="clear-btn" onclick="clearPage()">🧹 Pulisci</button>
             </div>
 
-            <div id="qrCodeDiv"></div>
-            <div id="barcodeDiv"></div>
-            <div id="logDiv"></div>
+            <div class="output-container">
+                <div id="qrCodeDiv"></div>
+                <div id="barcodeDiv"></div>
+                <p id="logDiv"></p>
+            </div>
         </section>
     </main>
 
@@ -46,89 +45,10 @@
         <p>&copy; <span class="year">2025</span> <strong>TICoding</strong> - Tutti i diritti riservati</p>
     </footer>
 
-    <script>
-        var qrCodeText = '';
-
-        function generateQRCode() {
-            var inputText = document.getElementById('inputText').value;
-            var logDiv = document.getElementById('logDiv');
-
-            if (inputText.trim() !== '') {
-                var qrCodeDiv = document.getElementById('qrCodeDiv');
-                qrCodeDiv.innerHTML = '';
-
-                var qr = new QRCode(qrCodeDiv, {
-                    text: inputText,
-                    width: 200,
-                    height: 200
-                });
-
-                qrCodeText = inputText;
-                logDiv.innerText = 'QR Code generato correttamente!';
-            } else {
-                logDiv.innerText = 'Inserisci un testo valido.';
-            }
-        }
-
-        function generateBarcode() {
-            var inputText = document.getElementById('inputText').value;
-            var logDiv = document.getElementById('logDiv');
-
-            if (inputText.trim() !== '') {
-                var barcodeDiv = document.getElementById('barcodeDiv');
-                barcodeDiv.innerHTML = '';
-
-                try {
-                    var canvas = document.createElement('canvas');
-                    barcodeDiv.appendChild(canvas);
-
-                    JsBarcode(canvas, inputText, {
-                        format: 'CODE128',
-                        width: 2,
-                        height: 80
-                    });
-
-                    logDiv.innerText = 'Barcode generato correttamente!';
-                } catch (error) {
-                    logDiv.innerText = 'Errore nella generazione del barcode: ' + error.message;
-                }
-            } else {
-                logDiv.innerText = 'Inserisci un testo valido.';
-            }
-        }
-
-        function saveQRCode() {
-            if (qrCodeText.trim() !== '') {
-                var qrCodeCanvas = document.getElementById('qrCodeDiv').getElementsByTagName('canvas')[0];
-                qrCodeCanvas.toBlob(function (blob) {
-                    saveAs(blob, 'QRCode.png');
-                });
-            } else {
-                document.getElementById('logDiv').innerText = 'Nessun QR code da salvare.';
-            }
-        }
-
-        function saveBarcode() {
-            var barcodeDiv = document.getElementById('barcodeDiv');
-
-            if (barcodeDiv.innerHTML.trim() !== '') {
-                var barcodeCanvas = barcodeDiv.getElementsByTagName('canvas')[0];
-                barcodeCanvas.toBlob(function (blob) {
-                    saveAs(blob, 'Barcode.png');
-                });
-            } else {
-                document.getElementById('logDiv').innerText = 'Nessun barcode da salvare.';
-            }
-        }
-
-        function clearPage() {
-            document.getElementById('inputText').value = '';
-            document.getElementById('qrCodeDiv').innerHTML = '';
-            document.getElementById('barcodeDiv').innerHTML = '';
-            document.getElementById('logDiv').innerText = '';
-            qrCodeText = '';
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
