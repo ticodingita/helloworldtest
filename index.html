@@ -3,6 +3,14 @@ layout: default
 title: Home
 ---
 
+<script>
+    if (performance.navigation.type === 1) {
+        console.log("Pagina ricaricata automaticamente");
+    } else {
+        window.location.reload();
+    }
+</script>
+
 <h2>Benvenuti su TICoding!</h2>
 <br>
 
