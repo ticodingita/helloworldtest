@@ -31,14 +31,6 @@
 
     </main>
     
-    <h1>Ultimi Articoli</h1>
-<ul>
-    {% for post in site.posts limit:5 %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%d %B %Y" }}</small>
-        </li>
-    {% endfor %}
-</ul>
 
     <footer>
         <p>TiCoding - Tutti i diritti riservati</p>
