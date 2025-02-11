@@ -1,7 +1,12 @@
 ---
 layout: post
-title: "Il Mio Primo Articolo"
-date: 2025-02-10
+title: "Benvenuto su TICoding!"
+date: 2025-02-11
+categories: generale
 ---
 
-Benvenuto nel primo post del blog TICoding! 🚀
+TICoding è un progetto dedicato alla diffusione delle tecnologie digitali nella scuola.
+
+Offriamo risorse, strumenti e idee per docenti e studenti, favorendo un apprendimento innovativo e inclusivo.
+
+Seguici per scoprire novità, guide e tutorial! 🚀
