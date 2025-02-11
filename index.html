@@ -4,13 +4,8 @@ title: Home
 ---
 
 <h2>Benvenuti su TICoding!</h2>
-<p>Sito web realizzato da Marco Medori. Risorse liberamente utilizzabili.</p>
 <br>
-<a class="button-link" href="https://sites.google.com/view/tic-polo-urbani/home-page" target="_blank">
-    🌐 Visita il sito TIC Urbani realizzato con Google Sites
-</a>
 
-<h2>Ultimi Articoli</h2>
 {% for post in site.posts limit:5 %}
     <article class="post">
         <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
