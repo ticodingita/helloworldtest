@@ -17,6 +17,7 @@
         <a href="index.html">Home</a>
         <a href="info.html">Info</a>
         <a href="barcodeqrcode.html">QR & Barcode</a>
+        <a href="blog/">Blog</a>
     </nav>
 
     <main>
@@ -27,7 +28,14 @@
             🌐 Visita il sito TIC Urbani realizzato con Google Sites
         </a>
 
-
+        <h2>Ultimi Articoli</h2>
+        <ul>
+            {% for post in site.posts limit:5 %}
+                <li>
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%d %B %Y" }}</small>
+                </li>
+            {% endfor %}
+        </ul>
     </main>
 
     <footer>
