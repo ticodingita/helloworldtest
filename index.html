@@ -3,49 +3,30 @@ layout: default
 title: Home
 ---
 
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICoding - Tic per la Scuola</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<header>
+    <h1>TICoding</h1>
+    <p>Informatica per la scuola: risorse, strumenti e idee per il futuro! v2</p>
+</header>
 
-    <header>
-        <h1>TICoding</h1>
-        <p>Informatica per la scuola: risorse, strumenti e idee per il futuro! v1</p>
-    </header>
+<nav>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/info.html' | relative_url }}">Info</a>
+    <a href="{{ '/barcodeqrcode.html' | relative_url }}">QR & Barcode</a>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
+</nav>
 
-    <nav>
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/info.html' | relative_url }}">Info</a>
-        <a href="{{ '/barcodeqrcode.html' | relative_url }}">QR & Barcode</a>
-        <a href="{{ '/blog/' | relative_url }}">Blog</a>
-    </nav>
+<h2>Benvenuti su TICoding!</h2>
+<p>Sito web realizzato da Marco Medori. Risorse liberamente utilizzabili.</p>
+<br>
+<a class="button-link" href="https://sites.google.com/view/tic-polo-urbani/home-page" target="_blank">
+    🌐 Visita il sito TIC Urbani realizzato con Google Sites
+</a>
 
-    <main>
-        <h2>Benvenuti su TICoding!</h2>
-        <p>Sito web realizzato da Marco Medori. Risorse liberamente utilizzabili.</p>
-        <br>
-        <a class="button-link" href="https://sites.google.com/view/tic-polo-urbani/home-page" target="_blank">
-            🌐 Visita il sito TIC Urbani realizzato con Google Sites
-        </a>
-
-        <h2>Ultimi Articoli</h2>
-        <ul>
-            {% for post in site.posts limit:5 %}
-                <li>
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%d %B %Y" }}</small>
-                </li>
-            {% endfor %}
-        </ul>
-    </main>
-
-    <footer>
-        <p>TiCoding 2025 - Tutti i diritti riservati</p>
-    </footer>
-
-</body>
-</html>
+<h2>Ultimi Articoli</h2>
+<ul>
+    {% for post in site.posts limit:5 %}
+        <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%d %B %Y" }}</small>
+        </li>
+    {% endfor %}
+</ul>
