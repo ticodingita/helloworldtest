@@ -179,3 +179,12 @@ footer {
     font-size: 1.1em;
     font-weight: bold;
 }
+
+.post-title {
+    background-color: transparent;
+    padding: 5px 0;
+    border-bottom: 2px solid #ccc;
+    font-size: 2em;
+    text-align: center;
+}
+
